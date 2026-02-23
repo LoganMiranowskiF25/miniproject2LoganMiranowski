@@ -8,9 +8,6 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('spending_patterns_detailed.csv')
 
-print(df.columns)
-print(df.head())
-
 streaming_df = df[(df["Category"] == "Subscription") & 
                   (df["Type"] == "Streaming Service")]
 
