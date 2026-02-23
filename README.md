@@ -48,12 +48,16 @@ Contributors names and contact info
 Logan Miranowski  
  
 ## Version History
-* 0.6
+* 0.8
+    * Modified requirements.txt
+* 0.7
     * Added README.md
-* 0.5
+* 0.6
     * Removed debugging prints for final submission
-* 0.4
+* 0.5
     * Added requirements.txt
+* 0.4
+    * Removed duplicate files    
 * 0.3
     * Renamed main file for cleaner structure
 * 0.2
