@@ -8,11 +8,13 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('spending_patterns_detailed.csv')
 
-streaming_df = df[(df["Category"] == "Subscription") & 
-                  (df["Type"] == "Streaming Service")]
+df.columns = df.columns.str.strip()
 
-streaming_customers = streaming_df["CustomerID"].nunique()
-total_customers = df["CustomerID"].nunique()
+streaming_df = df[(df["Category"].str.strip().str.lower() == "subscriptions") & 
+                  (df["Item"].str.strip().str.lower() == "streaming service")]
+
+streaming_customers = streaming_df["Customer ID"].nunique()
+total_customers = df["Customer ID"].nunique()
 
 percentage = (streaming_customers / total_customers) * 100
 
